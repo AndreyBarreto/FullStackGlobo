@@ -7,7 +7,11 @@ Precisamos desenvolver uma ferramenta para criação de Cards de conteúdo espor
 
 - Precisamos primeiramente configurar nossa variáveis de ambiente no .env o  .env.example já está certo os padrões básicos a única variável que precisa mexer é no POSTGRES_HOST e colocar seu ip e a porta que o serviço está rodando e no REACT_APP_CURRENT_IP apenas seu IP. 
 
-- Para rodar é necessário o docker e o docker-compose , execute esse comando "docker-compose up -d --build" que vai gerar nossa imagem e nossos containers também.
+- Passo 1 Crie um .env no escopo principal do projeto
+
+- Passo 2 Copie tudo do .env.example nela mas mude as variáveis REACT_APP_CURRENT_IP = para seu ip (entre no CMD e digite ipconfig) , mude também a váriavel POSTGRES_HOST para o seu ip dois pontos e a porta onde o container está hospedada(no caso foi definida como 5431)
+
+- Passo 3 Para rodar é necessário o docker e o docker-compose , execute esse comando "docker-compose up -d --build" que vai gerar nossa imagem e nossos containers também.
 
 - Espero que gostem desse desenvolvimento :D
 
