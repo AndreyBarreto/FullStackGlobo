@@ -21,8 +21,8 @@ const Home = () => {
 
 
   useEffect(async () => {
-    const { data } = await axios.get(`http://${process.env.REACT_APP_CURRENT_IP}:3333/cards`)
-    setCards(data)
+    const  data  = await axios.get(`http://${process.env.REACT_APP_CURRENT_IP}:3333/cards`)
+    setCards(data.data)
   }, [updateCards])
 
   useEffect(async () => {
@@ -62,13 +62,12 @@ const Home = () => {
           )
         })
           .catch((err) => {
-            setupdateCards(cards)
             Swal.fire(
               'Problema!',
               'Seu Card não foi deletado.',
               'failed'
             )
-
+            
           })
       }
     })

@@ -7,7 +7,7 @@ class FindAllCard:
         lista_cards = []
         cardObject = CardDomain.findAll(db, CardsModel)
         if cardObject == []:
-            return {"error": "No cards Avaliable"}, 404
+            return json.dumps([])
         for card in cardObject:
             lista_cards.append({"texto": card.texto, "id": card.id,"tags":card.tags.split(',')})
         return json.dumps(lista_cards)
