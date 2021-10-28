@@ -28,6 +28,8 @@ services:
     command: python3 src/app.py
     depends_on:
         - "postgres"
+    restart: always
+
 
 
   frontend:
