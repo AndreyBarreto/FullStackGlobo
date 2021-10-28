@@ -62,11 +62,13 @@ const Home = () => {
           )
         })
           .catch((err) => {
+            setupdateCards(cards)
             Swal.fire(
               'Problema!',
               'Seu Card não foi deletado.',
               'failed'
             )
+
           })
       }
     })
