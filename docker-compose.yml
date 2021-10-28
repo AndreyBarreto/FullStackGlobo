@@ -14,5 +14,15 @@ services:
       - "5431:5432"
 
 
+  api:
+    build: 
+      context: backend
+      dockerfile: Dockerfile
+    ports:
+        - 3333:3333
+    
+    command: python3 src/app.py
+    depends_on:
+        - "postgres"
 volumes:
     postgres:
