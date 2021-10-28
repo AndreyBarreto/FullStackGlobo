@@ -1,0 +1,17 @@
+.home-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  .grid-container-box {
+    padding: 16px;
+    margin-bottom: 60px;
+    margin-top: 250px;
+  }
+  .grid-container-search-box {
+    padding: 16px;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+  }
+}

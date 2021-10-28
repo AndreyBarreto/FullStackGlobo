@@ -1,0 +1,26 @@
+.header-secondary-container {
+  height: 100px;
+  padding: 16px;
+  background-image: url(/assets/background.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+
+  .text-content {
+    width: 80px;
+    word-break: break-word;
+    text-align: center;
+    // width/2 - 40px arrow img 
+    margin-left: calc(50% - 80px);
+
+    h2 {
+      margin: 0;
+      font-size: 20px;
+      color: #ed4d77;
+      font-weight: 400;
+      font-style: italic;
+    }
+  }
+}
