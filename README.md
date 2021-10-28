@@ -2,6 +2,21 @@
 
 Precisamos desenvolver uma ferramenta para criação de Cards de conteúdo esportivos (Insights).
 
+
+### Como RODAR
+
+- Precisamos primeiramente configurar nossa variáveis de ambiente no .env o  .env.example já está certo os padrões básicos a única variável que precisa mexer é no POSTGRES_HOST e colocar seu ip e a porta que o serviço está rodando e no REACT_APP_CURRENT_IP apenas seu IP. 
+
+- Para rodar é necessário o docker e o docker-compose , execute esse comando "docker-compose up -d --build" que vai gerar nossa imagem e nossos containers também.
+
+- Espero que gostem desse desenvolvimento :D
+
+
+
+### Porque desse jeito?
+ - Desde o começo, tive a ideia de fazer um relacionamento entre as tabelas criando linha em outra tabela relacionada aos cards, só que a perfomance não se saiu bem, então optei em fazer o básico, como vocês queriam bastante performance foi o suficiente
+
+ 
 ### 1. Interace HTTP REST API
 
 Ações da API

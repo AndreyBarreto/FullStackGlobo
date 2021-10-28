@@ -9,7 +9,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { useHistory } from "react-router-dom";
 
-
+require('dotenv').config()
 
 
 const Home = () => {
@@ -21,13 +21,13 @@ const Home = () => {
 
 
   useEffect(async () => {
-    const { data } = await axios.get("http://localhost:3333/cards")
+    const { data } = await axios.get(`http://${process.env.REACT_APP_CURRENT_IP}:3333/cards`)
     setCards(data)
   }, [updateCards])
 
   useEffect(async () => {
     if (inputValue) {
-      axios.get(`http://localhost:3333/cards/${inputValue}/tags`).then(({ data }) => {
+      axios.get(`http://${process.env.REACT_APP_CURRENT_IP}:3333/cards/${inputValue}/tags`).then(({ data }) => {
         setCards(data)
       })
         .catch(() => {
@@ -51,7 +51,7 @@ const Home = () => {
       confirmButtonText: 'Sim,deletar'
     }).then((result) => {
       if (result.isConfirmed) {
-        axios.delete(`http://localhost:3333/cards/${id}`).then((response) => {
+        axios.delete(`http://${process.env.REACT_APP_CURRENT_IP}:3333/cards/${id}`).then((response) => {
           setupdateCards(cards)
           setInputValue("")
 

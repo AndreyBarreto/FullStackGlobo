@@ -10,7 +10,7 @@ import axios from "axios";
 import Swal from "sweetalert2";
 import { useHistory } from "react-router-dom";
 
-
+require('dotenv').config()
 
 
 
@@ -29,7 +29,7 @@ const AddItem = (props) => {
 
   const sendData = () => {
     const data = { "texto": text, "tags": tags }
-    axios.post("http://localhost:3333/cards", data).then(() => {
+    axios.post(`http://${process.env.REACT_APP_CURRENT_IP}:3333/cards`, data).then(() => {
       Swal.fire(
         'Criado!',
         'Seu Card foi Criado.',
@@ -48,7 +48,7 @@ const AddItem = (props) => {
   }
   const updateDate = () => {
     const data = { "texto": text, "tags": tags }
-    axios.put(`http://localhost:3333/cards/${id}`, data).then(() => {
+    axios.put(`http://${process.env.REACT_APP_CURRENT_IP}:3333/cards/${id}`, data).then(() => {
       Swal.fire(
         'Atualizado!',
         'Seu Card foi Atualizado.',

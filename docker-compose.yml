@@ -18,11 +18,33 @@ services:
     build: 
       context: backend
       dockerfile: Dockerfile
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
+      POSTGRES_HOST: ${POSTGRES_HOST}
+      POSTGRES_NAME: ${POSTGRES_NAME}
     ports:
         - 3333:3333
-    
     command: python3 src/app.py
     depends_on:
         - "postgres"
+
+
+  frontend:
+    container_name: sample
+    build:
+      context: frontend
+      dockerfile: Dockerfile
+      args:
+        REACT_CURRENT_IP: ${REACT_CURRENT_IP}
+
+    ports:
+      - 3000:3000
+    environment:
+      REACT_APP_CURRENT_IP: ${REACT_APP_CURRENT_IP}
+      CHOKIDAR_USEPOLLING: true
+      
+    depends_on:
+    - "api"
 volumes:
     postgres:
