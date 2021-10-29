@@ -11,6 +11,8 @@ Precisamos desenvolver uma ferramenta para criação de Cards de conteúdo espor
 
 - Passo 3 Para rodar é necessário o docker e o docker-compose , execute esse comando "docker-compose up -d --build" que vai gerar nossa imagem e nossos containers também.
 
+- o frontend está mapeado para rodar na porta 3000 do localhost
+
 - Espero que gostem desse desenvolvimento :D
 
 
