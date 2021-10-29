@@ -15,6 +15,7 @@ services:
 
 
   api:
+    container_name: api
     build: 
       context: backend
       dockerfile: Dockerfile
@@ -33,7 +34,7 @@ services:
 
 
   frontend:
-    container_name: sample
+    container_name: frontend
     build:
       context: frontend
       dockerfile: Dockerfile
