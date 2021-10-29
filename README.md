@@ -15,9 +15,6 @@ Precisamos desenvolver uma ferramenta para criação de Cards de conteúdo espor
 
 
 
-### Porque desse jeito?
- - Desde o começo, tive a ideia de fazer um relacionamento entre as tabelas criando linha em outra tabela relacionada aos cards, só que a perfomance não se saiu bem, então optei em fazer o básico, como vocês queriam bastante performance foi o suficiente
-
  
 ### 1. Interace HTTP REST API
 
